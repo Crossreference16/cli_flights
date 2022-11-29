@@ -1,17 +1,25 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MainMenuTest {
     Flight flight1;
+    private Passenger passengerOne;
+    private Passenger passengerTwo;
 
     @BeforeEach
 
     public void setUp() {
-        ArrayList<Passenger> passengers = new ArrayList<Passenger>();
-        passengers.add(0, "Bob");
+//        List<Passenger> passengers = new List<Passenger>();
+        List<Passenger> passengers = new ArrayList<>();
+        passengerOne = new Passenger("Bob", 125, 357);
+        passengerTwo = new Passenger ("Lucy", 467, 259);
+        passengers.add(List.of(passengerOne,passengerTwo));
+        //List.of(passengerOne, passengerTwo);
+        //passengers.of(0, passengerOne, 1);
         flight1 = new Flight("Singapore", 43, passengers);
 
 //      ArrayList<Flight> flights = new ArrayList<>();
@@ -27,7 +35,9 @@ public class MainMenuTest {
 
     @Test
     public void testDisplayFlight(){
-        //test if output equals to function 
+        //add flight1 to flights arraylist
+        //test if output equals to
+        MainMenu.flights.add(flight1);
 
     }
 
