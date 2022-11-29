@@ -4,11 +4,17 @@ import java.util.List;
 public class MainMenu {
 
    protected static ArrayList<Flight> flights = new ArrayList<>();
+   private static Passenger passengerOne;
+   private static Passenger passengerTwo;
 
 
     public static void main(String[] args) {
-     flights.add(new Flight("Singapore", 111, List.of(new Passenger("John", 123, 101))));
-displayFlights();
+       passengerOne = new Passenger("Bob", 125, 357);
+       passengerTwo = new Passenger ("Lucy", 467, 259);
+      //flights.add(new Flight("Singapore", 111, List.of(new Passenger("John,", 12, 13))));
+      flights.add(new Flight("Singapore", 111, List.of(passengerOne, passengerTwo)));
+      displayFlights();
+      System.out.println(passengerOne);
 
     }
 

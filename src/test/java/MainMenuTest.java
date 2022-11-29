@@ -27,7 +27,7 @@ public class MainMenuTest {
 
     @Test
     public void testDisplayFlight(){
-
+        //test if output equals to function 
 
     }
 

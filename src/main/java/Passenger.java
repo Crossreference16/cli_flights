@@ -13,7 +13,14 @@ public class Passenger {
         this.id = id;
     }
 
-
+    @Override
+    public String toString() {
+        return "Passenger{" +
+                "name='" + name + '\'' +
+                ", contactNumber=" + contactNumber +
+                ", id=" + id +
+                '}';
+    }
 
     //Getters + Setters
     public String getName() {
