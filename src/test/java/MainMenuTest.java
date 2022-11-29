@@ -10,7 +10,7 @@ public class MainMenuTest {
     @BeforeEach
 
     public void setUp() {
-        ArrayList<String> passengers = new ArrayList<String>();
+        ArrayList<Passenger> passengers = new ArrayList<Passenger>();
         passengers.add(0, "Bob");
         flight1 = new Flight("Singapore", 43, passengers);
 
@@ -25,5 +25,10 @@ public class MainMenuTest {
         assertThat(MainMenu.flights.contains(flight1)).isEqualTo(MainMenu.flights.add(flight1));
     }
 
+    @Test
+    public void testDisplayFlight(){
+
+
+    }
 
 }

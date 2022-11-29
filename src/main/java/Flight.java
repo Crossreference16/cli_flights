@@ -1,18 +1,27 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Flight {
 
     String destination;
     int id;
-    ArrayList<String> passengers;
+    List<Passenger> passengers;
 
 
-    public Flight (String destination, int id, ArrayList<String> passengers){
+    public Flight (String destination, int id, List<Passenger> passengers){
         this.destination = destination;
         this.id = id;
         this.passengers = passengers;
     }
 
+    @Override
+    public String toString() {
+        return "Flight{" +
+                "destination='" + destination + '\'' +
+                ", id=" + id +
+                ", passengers=" + passengers +
+                '}';
+    }
 
     //Getters + Setters
     public String getDestination() {
